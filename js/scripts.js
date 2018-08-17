@@ -35,6 +35,7 @@ var answer = [];
 $(document).ready(function() {
   $("form#userForm").submit(function(event) {
   event.preventDefault();
+  $("#answer").empty();
   var inputNumber = parseInt($("input#inputUserForm").val());
   var finalNumber = beepBoop(inputNumber);
 
@@ -42,7 +43,6 @@ $(document).ready(function() {
   if (isNaN(inputNumber)) {
     alert("Error. Not a valid number, try again!");
   }
-    $("#answer").hide();
     $("#answer").show();
 
     $("<li>" + finalNumber + "</li>").appendTo("#answer");
