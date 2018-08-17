@@ -1,3 +1,24 @@
 #output {
   display : none;
 }
+
+h1 {
+  text-align: center;
+  font-family: monospace;
+  font-weight: bold;
+  font-size: 100px;
+  color: #1a2538;
+}
+
+img {
+  width: 50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.results {
+  font-family: monospace;
+  font-size: 20px;
+  color: #1a2538;
+}

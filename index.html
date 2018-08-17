@@ -9,23 +9,33 @@
   </head>
   <body>
     <div class="container">
-      <h1>Let's play a game called Beep Boop</h1>
-
-      <form id="userForm">
-        <div class="form-group">
-          <label for="number">Enter a number and find out the results!</label>
-          <input id="inputUserForm" type="text">
+      <div class="row">
+        <div class="col-md-6">
+          <img src="img/robot.jpg" alt="illustration of robot">
+          <h1>Hello Humanoid!</h1>
+          <div class="card">
+            <div class="card-body">
+              <h4 class="card-title">Let Us Play A Game Called Beep Boop</h4>
+              <p class="card-text">
+                Numbers that contain a 0 are replaced (all digits) with "Beep!"
+                Numbers that contain a 1 are replaced (all digits) with "Boop!"
+                Numbers divisible by 3 are replaced with "I'm sorry, Dave. I'm afraid I can't do that."</p>
+            </div>
+          </div>
+          <br>
+          <form id="userForm">
+            <div class="form-group">
+              <label for="number">Enter a number and find out the results!</label>
+              <input id="inputUserForm" type="text">
+            </div>
+            <button type="submit" class="btn btn-info">Find out!</button>
+          </form>
+          <div class="results">
+            <div id="answer">
+            </div>
+          </div>
         </div>
-
-        <button type="submit" class="btn">Find out!</button>
-      </form>
-      <div class="results">
-
-        <div id="answer">
-          <!-- <li id="sequence"></li> -->
-        </div>
-
       </div>
     </div>
   </body>
-</html>
+  </html>

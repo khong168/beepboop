@@ -4,14 +4,14 @@ var beepBoop = function(userInput) {
 var answer = [];
 
   for (var i = 0; i <= userInput; i++) {
-    if  (i.toString().includes("0")) {
+    if  (i.toString() > 0 && i.toString() % 3 === 0) {
+      answer.push (" I'm sorry, Dave. I'm afraid I can't do that.");
+    } else if (i.toString().includes("0")) {
       answer.push(" Beep!");
     } else if (i.toString().includes("1")) {
       answer.push(" Boop!");
-    }else if (i.toString() % 3 === 0) {
-      answer.push (" I'm sorry, Dave. I'm afraid I can't do that.");
     } else {
-      answer.push(" " + i);
+      answer.push(i + "");
     };
   };
 
@@ -35,7 +35,6 @@ var answer = [];
 $(document).ready(function() {
   $("form#userForm").submit(function(event) {
   event.preventDefault();
-  $("#answer").empty();
   var inputNumber = parseInt($("input#inputUserForm").val());
   var finalNumber = beepBoop(inputNumber);
 
@@ -44,6 +43,7 @@ $(document).ready(function() {
     alert("Error. Not a valid number, try again!");
   }
     $("#answer").show();
+    $("#answer").empty();
 
     $("<li>" + finalNumber + "</li>").appendTo("#answer");
     $("form#userForm")[0].reset();
