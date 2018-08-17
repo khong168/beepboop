@@ -33,7 +33,24 @@ $(document).ready(function() {
     }
       $("#answer").show();
       $("#answer").empty();
+
       $("<li>" + finalNumber + "</li>").appendTo("#answer");
       $("form#userForm")[0].reset();
   });
+// reverse answer
+  $(document).ready(function() {
+    $("##reverse").click(function(event) {
+    event.preventDefault();
+    console.log
+    var inputNumber = parseInt($("input#inputUserForm").val());
+    var finalNumber = beepBoop(inputNumber);
+      if (isNaN(inputNumber)) {
+        alert("Error. Not a valid number, try again!");
+      }
+        $("#answer").show();
+        $("#answer").empty();
+
+        $("<li>" + (finalNumber).reverse() + "</li>").appendTo("#answer");
+        $("form#userForm")[0].reset();
+    });
 });
